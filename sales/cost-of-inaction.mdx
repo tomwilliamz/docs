@@ -1,0 +1,151 @@
+---
+title: "Cost of Inaction (COI)"
+description: "How Supercase calculates the financial cost of not solving a problem."
+icon: "calculator"
+---
+
+## The 30-Second Version
+
+Supercase calculates the **financial cost of not solving a problem** by comparing three scenarios:
+
+1. **Do Nothing** - What the customer loses every quarter by staying put
+2. **DIY** - What they gain by solving it themselves (slower adoption, lower ceiling)
+3. **Vendor (Us)** - What they gain with our solution (faster adoption, higher ceiling)
+
+The model is built on **actual customer metrics**, not magic multipliers. Every number traces back to something the seller heard from the customer or pulled from public data.
+
+---
+
+## Why This Model Is Different
+
+Most ROI calculators work like this: *"Our solution delivers 10x ROI!"* That kills credibility instantly because the vendor is grading their own homework.
+
+Supercase works differently:
+
+- The **seller inputs what's real today** (S0) and **what's achievable** (S1) based on the customer conversation
+- The gap between S0 and S1 is the **opportunity** - it exists whether the customer buys from us or not
+- What differentiates Do Nothing vs. DIY vs. Vendor is **how much of the organization actually adopts** the better behavior
+- The customer can challenge any input, and the model recalculates transparently
+
+<Tip>This means the business case survives CFO scrutiny because there's no hidden assumption doing the heavy lifting.</Tip>
+
+---
+
+## Key Concepts
+
+### S0 and S1: Current State vs. Achievable State
+
+| Term | What It Means | Example |
+|------|--------------|---------|
+| **S0** (Current) | The metric as it stands today | Win rate is 20% |
+| **S1** (Achievable) | What the metric *should be* based on the customer conversation | Win rate could be 28% with better process |
+
+**S0** comes from customer data, CRM pulls, or the seller's discovery notes.
+
+**S1** comes from the seller's judgement about what's realistically achievable - not a percentage boost, but a concrete target value.
+
+The gap (S1 - S0) is the opportunity. In the example above: 8 percentage points of win rate improvement.
+
+### Adoption Rates: Why the Three Options Differ
+
+The same opportunity (S0 to S1) exists for everyone. What changes is **how much of the organization actually gets there**:
+
+| Rate | What It Means | Typical Range |
+|------|--------------|---------------|
+| **a0** (Current adoption) | % of the org currently following best practices | 15-35% |
+| **a1_diy** (DIY adoption) | % that would adopt if they build/do it themselves | 45-65% |
+| **a1_vendor** (Vendor adoption) | % that would adopt with our solution | 75-90% |
+
+<Note>If only 25% of reps currently follow the ideal process and a DIY effort gets that to 60% vs. a vendor getting it to 85%, the *same metric improvement* produces very different financial outcomes.</Note>
+
+### M0: The Financial Pool
+
+M0 is the **dollar amount at stake** - the financial baseline that gets multiplied by the metric change. It's derived from the customer's own financials:
+
+- For **win rate**: M0 = New ARR pipeline (how much revenue flows through the metric)
+- For **churn**: M0 = Current ARR (the base being eroded)
+- For **cost efficiency**: M0 = The relevant budget (support spend, S&M spend, etc.)
+
+M0 is never a made-up number. It's pulled from the customer's financial profile - either from public filings, CRM data, or what the seller learned in discovery.
+
+---
+
+## How the Math Works
+
+### The Core Formula (Simplified)
+
+```
+Annual Cost of Inaction = Financial Pool  x  Metric Gap  x  Non-Adoption Rate
+                        =      M0         x  |S1 - S0|   x     (1 - a0)
+```
+
+**In plain English:** Take the dollars at stake, multiply by how much the metric could improve, then multiply by the percentage of the org that *isn't* doing the right thing today.
+
+### Example: Win Rate
+
+A customer with:
+- **$50M** in new ARR pipeline (M0)
+- **20%** win rate today (S0)
+- **28%** achievable win rate (S1)
+- **25%** of reps currently follow best practices (a0)
+
+```
+Annual COI = ($50M / 0.20) x |0.28 - 0.20| x (1 - 0.25)
+           = $250M pipeline intensity x 0.08 x 0.75
+           = $15M/year in unrealized revenue
+```
+
+That $15M/year is what they're **leaving on the table** by not closing the gap.
+
+### How DIY and Vendor Differ
+
+For DIY (a1 = 60%):
+```
+Annual Impact = M0 x |S1 - S0| x (a1_diy - a0)
+              = $250M x 0.08 x (0.60 - 0.25)
+              = $7M/year incremental gain
+```
+
+For Vendor (a1 = 85%):
+```
+Annual Impact = M0 x |S1 - S0| x (a1_vendor - a0)
+              = $250M x 0.08 x (0.85 - 0.25)
+              = $12M/year incremental gain
+```
+
+<Tip>The vendor doesn't change *what's achievable* (S1 stays the same). It changes *how many people actually get there*.</Tip>
+
+---
+
+## The Rollout Model
+
+Impact doesn't happen day one. The model accounts for the fact that adoption takes time:
+
+| Profile | Time to Value | Full Ramp | Typical Use |
+|---------|--------------|-----------|-------------|
+| **Fast** | 1 quarter | 1 quarter | Simple tools, quick deployment |
+| **Steady** | 1 quarter | 2 quarters | Most implementations (default) |
+| **Slow** | 2 quarters | 4 quarters | Complex enterprise rollouts |
+
+During the ramp period, adoption gradually increases from a0 toward a1, and a **proficiency curve** models the fact that even adopted users aren't fully productive immediately.
+
+<Note>Year 1 impact is always lower than Year 2 run rate - which matches reality and builds credibility with finance teams.</Note>
+
+---
+
+## Confidence Ranges
+
+Rather than showing a single number, Supercase shows a **range of likely outcomes** using 1,000 simulated scenarios.
+
+Each simulation slightly varies:
+- The current metric (S0) - because measurement has uncertainty
+- The achievable target (S1) - because the lift isn't guaranteed
+- The adoption rate (a1) - because rollout success varies
+
+| Band | Meaning | Use In Conversation |
+|------|---------|-------------------|
+| **P10-P25** | Conservative / downside | "Even in the worst case, you're looking at $X" |
+| **P50** | Expected / median | "The most likely outcome is $Y" |
+| **P75-P90** | Optimistic / upside | "If everything goes well, this could reach $Z" |
+
+Single-point estimates feel like sales tricks. Ranges feel like analysis. CFOs and finance teams respect confidence intervals because that's how they think about forecasting.

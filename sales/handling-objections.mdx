@@ -1,0 +1,88 @@
+---
+title: "Handling Customer Questions"
+description: "Answers to the most common challenges customers raise about the business case."
+icon: "comments"
+---
+
+## "Where do these numbers come from?"
+
+Every input has a traceable source:
+
+| Input | Source |
+|-------|--------|
+| **Financial pool (M0)** | ARR, pipeline, or budget data from public filings, CRM, or seller discovery |
+| **Current metric (S0)** | CRM data, customer-reported metrics, or industry benchmarks |
+| **Target metric (S1)** | The sales conversation about what's achievable |
+| **Adoption rates** | Implementation experience and industry data, adjustable by the seller |
+
+<Tip>If a customer challenges any input, that's a *good* thing. Invite them to set their own numbers. When they own the assumptions, they trust the output.</Tip>
+
+---
+
+## "Why should I trust your adoption numbers?"
+
+The adoption rates (a0, a1_diy, a1_vendor) are the most subjective inputs, and that's by design. They're explicitly editable, and the customer can adjust them. The model recalculates instantly.
+
+Challenge them to put in their own numbers - the gap between DIY and Vendor adoption almost always holds because of:
+- Dedicated support and onboarding
+- Purpose-built tooling vs. internal workarounds
+- Training and enablement programs
+- Accountability and measurement built into the solution
+
+---
+
+## "What if our metrics are different from what you've assumed?"
+
+Change them. The model is fully parameterized. If the customer says their win rate is 25% not 20%, update S0 and the entire business case recalculates.
+
+This is a feature, not a bug - it turns the conversation from *"do you believe our ROI claim?"* to *"let's agree on the inputs and let the math speak."*
+
+---
+
+## "How does this compound over time?"
+
+The model runs quarter-by-quarter over the full time horizon (typically 8-12 quarters).
+
+For most KPIs, the quarterly impact stays flat once adoption reaches steady state.
+
+For **churn and NDR** specifically, the impact **compounds** - each year builds on the larger retained base from the previous year, creating an exponential divergence between Do Nothing and the improvement scenarios.
+
+<Note>This compounding effect is one of the most powerful points for retention-focused products. A 2% churn reduction doesn't just save 2% of ARR - it saves 2% of an ever-growing base.</Note>
+
+---
+
+## "What's the payback period?"
+
+Compare cumulative impact against cumulative costs quarter by quarter. The crossover point is the payback period.
+
+For Vendor scenarios, this typically accounts for:
+- Initial license/setup costs
+- Implementation fees
+- Ongoing subscription
+- Offset against the ramping financial impact from improved adoption
+
+---
+
+## "This seems too good to be true."
+
+Point to three things:
+
+1. **The inputs are theirs.** S0, S1, and M0 all trace back to the customer's own data or what they told you in discovery. There's no hidden multiplier.
+
+2. **We show the downside.** The P10-P25 band shows the conservative case. We're not hiding behind best-case numbers.
+
+3. **DIY is on the table.** If we were inflating numbers, we wouldn't show a DIY option that gets partway there. The honesty of the three-option framework is the credibility mechanism.
+
+---
+
+## "Our finance team won't accept this."
+
+The model is designed specifically for finance scrutiny:
+
+- **Confidence ranges** instead of point estimates (how finance teams forecast)
+- **Traceable inputs** - every number has a source
+- **No hidden multipliers** - the math is transparent
+- **Conservative defaults** - adoption rates and uncertainty bands lean conservative
+- **Quarter-by-quarter modeling** - not a single annual number, but a time series that shows the ramp
+
+Ask the finance team to set their own assumptions. The model works with whatever inputs they trust.

@@ -1,0 +1,63 @@
+---
+title: "Supported KPIs"
+description: "The 10 pre-built KPI types available in Supercase and how they work."
+icon: "chart-bar"
+---
+
+## Go-to-Market KPIs
+
+| KPI | What It Measures | Typical S0 | Impact Driver |
+|-----|-----------------|-----------|---------------|
+| **Win Rate** | Deal close percentage | 15-30% | Pipeline conversion |
+| **Churn Rate** | Annual logo/revenue churn | 5-20% | ARR preservation |
+| **Net Dollar Retention** | Expansion vs. contraction | 95-115% | ARR growth |
+| **SQLs Generated** | Sales qualified leads per period | Varies | Pipeline volume |
+| **Pipeline Value** | Total pipeline dollars | Varies | Revenue opportunity |
+| **Budget Efficiency** | Marketing/sales ROI | Varies | Cost savings |
+| **Deal Velocity** | Days to close | 30-120 days | Cash flow acceleration |
+
+## Productivity KPIs
+
+| KPI | What It Measures | Typical S0 | Impact Driver |
+|-----|-----------------|-----------|---------------|
+| **Ticket Resolution** | Support tickets resolved | Varies | Operational efficiency |
+| **Employee Productivity** | Output per employee | Varies | Labor leverage |
+
+## Operations KPIs
+
+| KPI | What It Measures | Typical S0 | Impact Driver |
+|-----|-----------------|-----------|---------------|
+| **LTV:CAC Ratio** | Lifetime value vs. acquisition cost | 2-5x | Unit economics |
+
+---
+
+## Special Behaviors
+
+### Compounding KPIs: Churn and NDR
+
+<Warning>These KPIs behave differently from all others.</Warning>
+
+Unlike one-time rate improvements, reducing churn creates a **snowball effect**. Each year the retained base is larger, so the same churn rate saves more in absolute dollars.
+
+The model runs a **two-futures simulation** comparing ARR trajectories with and without improvement:
+
+- `ARR (no fix) = Base ARR x (1 - churn_rate)^year`
+- `ARR (with fix) = Base ARR x (1 - improved_churn)^year`
+- **COI = cumulative difference over the time horizon**
+
+This makes churn and NDR particularly powerful KPIs for retention-focused products.
+
+### Cost Reduction: Two Modes
+
+Cost reduction KPIs can work in two modes:
+
+<CardGroup cols={2}>
+  <Card title="Reduce Cost" icon="arrow-down">
+    Same output, lower budget. The impact shows up as **dollar savings** against the relevant budget line.
+  </Card>
+  <Card title="Increase Capacity" icon="arrow-up">
+    Same budget, more output. The impact shows up as **additional units or throughput** without increasing spend.
+  </Card>
+</CardGroup>
+
+The seller selects which mode fits the customer's situation. Both use the same underlying math but frame the output differently.

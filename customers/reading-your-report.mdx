@@ -1,0 +1,67 @@
+---
+title: "Reading Your Business Case"
+description: "A guide to understanding the numbers in your Supercase report."
+icon: "file-lines"
+---
+
+## What You're Looking At
+
+Your Supercase report shows the financial impact of three scenarios side by side:
+
+<CardGroup cols={3}>
+  <Card title="Do Nothing" icon="pause">
+    What your organization loses each quarter by maintaining the status quo.
+  </Card>
+  <Card title="DIY" icon="wrench">
+    What you gain by solving the problem internally with your own resources.
+  </Card>
+  <Card title="Vendor" icon="rocket">
+    What you gain by implementing with a dedicated solution and support.
+  </Card>
+</CardGroup>
+
+---
+
+## Key Numbers Explained
+
+### Year 1 Impact
+The cumulative financial impact over the first four quarters. This accounts for the **ramp-up period** - adoption doesn't happen overnight, so Year 1 is typically lower than the steady-state run rate.
+
+### Year 2 Run Rate
+The annual impact once adoption has fully ramped. This is the **steady-state value** - what you can expect every year going forward.
+
+### Total Impact (Gross)
+The cumulative impact over the full time horizon. This is the headline number before costs are subtracted.
+
+### Net Impact
+Total impact minus all costs (license fees, implementation, internal effort). This is the bottom-line value.
+
+### Confidence Ranges
+Every number comes with a range:
+
+| Band | What It Means |
+|------|--------------|
+| **Conservative (P10-P25)** | The outcome if things don't go perfectly - adoption is slower, the metric improvement is smaller |
+| **Expected (P50)** | The most likely outcome based on the inputs |
+| **Optimistic (P75-P90)** | The outcome if everything goes well - strong adoption, full metric improvement |
+
+<Tip>The conservative number is the one to anchor on with your finance team. If the business case works even at P25, it's a strong case.</Tip>
+
+---
+
+## Where the Numbers Come From
+
+Every input in the model has a source:
+
+- **Your current metrics** (S0) came from your CRM data, reported metrics, or what your team shared during discovery
+- **The target metrics** (S1) were set based on what's realistically achievable for your organization
+- **The financial baseline** (M0) was derived from your revenue, pipeline, or budget data
+- **Adoption rates** reflect typical implementation outcomes, adjustable based on your situation
+
+<Note>You can challenge any input. If a number doesn't match your reality, ask your rep to update it - the entire model recalculates instantly.</Note>
+
+---
+
+## What's the Payback Period?
+
+Look at where the cumulative impact line crosses the cumulative cost line. That crossover point is when the investment has paid for itself. Everything after that is net positive value.
