@@ -1,0 +1,115 @@
+---
+title: "Getting Started"
+description: "A step-by-step guide to configuring Supercase for first-time customers."
+icon: "play"
+---
+
+After signing in, you'll land on the **Configuration** wizard - a 5-step setup that builds your business case engine. You can jump between steps freely, but working through them in order gives the best results.
+
+---
+
+## Step 1: Company Information
+
+Tell us who the business case is about.
+
+| Field | What to Enter |
+|-------|--------------|
+| **Company Name** | The prospect or customer's legal name |
+| **Domain** | Their primary website (auto-fills from your email if blank) |
+| **Industry** | Their sector - used to pull relevant benchmarks |
+| **Employee Count** | Approximate headcount |
+| **Annual Revenue** | Approximate annual revenue in USD |
+
+These basics feed into every downstream calculation - revenue drives the financial pool, industry shapes benchmark comparisons.
+
+<Tip>Get these right first. The AI generation in the next step uses this data to research the company automatically.</Tip>
+
+---
+
+## Step 2: Your POV
+
+Define the problem you're solving and why it matters.
+
+This is the heart of Supercase. You're capturing the **Point of View** - the narrative that frames every business case you generate.
+
+**What to fill in:**
+- **Problem statement** - What's broken or underperforming for the customer?
+- **Fix / end state** - What does "good" look like once the problem is solved?
+- **Audience** - Who inside the organization is affected?
+- **Key insights** - What differentiates your approach?
+
+**Optional but powerful:**
+- **Upload supporting documents** - sales decks, call notes, emails. Supercase extracts the text and uses it as context.
+- **Generate with AI** - Hit this button and Supercase will research the company's domain, combine it with any uploaded documents, and pre-fill the entire form. Review and edit the output.
+
+<Note>The AI generation works best when you've completed Step 1 and uploaded at least one document with customer context.</Note>
+
+---
+
+## Step 3: Market Context
+
+Add industry benchmarks and proof points that strengthen your case.
+
+**Master toggle:** Turn "Enable Market Context" on to inject industry data into content generation.
+
+When enabled, you can:
+- **Select intelligence packs** - Pre-built collections of industry benchmarks and data points. Toggle on the ones relevant to your market.
+- **Upload custom research** - Drop in PDFs of analyst reports, market studies, or competitive intel. Supercase chunks and indexes them automatically.
+- **Review and approve chunks** - Each uploaded document is broken into individual data points. Approve the ones you want used, reject the rest.
+
+<Tip>You don't need to upload everything at once. You can come back and add more intelligence packs as you find useful research.</Tip>
+
+---
+
+## Step 4: Buy vs. Build
+
+Model what it actually takes to solve the problem - with or without you.
+
+This step has **three tabs**:
+
+### Project Plan
+Define milestones and timelines for both DIY and Vendor approaches. Use **"Generate Generic Project Plan"** to start from a template, then customize.
+
+### Approach & Risks
+Describe the risks and consequences of each path. Focus on what can go wrong, not just the task list.
+
+- **DIY Approach & Risks** - What happens when the customer tries to build this internally? (Auto-generates from your POV if left blank)
+- **Vendor Approach & Risks** - What does implementation look like with your solution?
+
+<Note>Both fields auto-generate using your POV context and milestones. Review and edit - the AI gives you a starting point, not a final answer.</Note>
+
+### Budget
+Enter cost line items for DIY and Vendor approaches. Use **"Generate Generic Cost Calculator"** for a template.
+
+This is where the business case gets concrete: what does each path actually cost? The model uses these costs to calculate net impact and payback period.
+
+---
+
+## Step 5: Cost of Inaction
+
+Configure the financial model that powers every business case.
+
+This is where you define the **KPI mechanics** - how the gap between current state (S0) and achievable state (S1) translates into dollars.
+
+Three mechanism types are available:
+
+| Type | Use When | Example |
+|------|----------|---------|
+| **Rate Change** | A percentage metric needs to improve | Win rate from 20% to 28% |
+| **Throughput Change** | Output volume needs to increase | Deals processed per quarter |
+| **Ratio Improvement** | An efficiency ratio needs to shift | Cost per acquisition |
+
+Set your performance gap parameters and adoption rates. The model calculates the rest - including confidence ranges from 1,000 Monte Carlo simulations.
+
+<Tip>See [Cost of Inaction (COI)](/sales/cost-of-inaction) for a deep dive on how S0, S1, and adoption rates work together.</Tip>
+
+---
+
+## You're Done
+
+After completing all five steps, you'll see the **completion screen**. From there:
+
+- **Create your first Supercase** - Jump straight into generating a business case
+- **Go to Dashboard** - Review your configuration or start exploring
+
+You can return to any step at any time from the Configuration page to refine your inputs as you learn more from customer conversations.
