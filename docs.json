@@ -32,7 +32,7 @@
         "groups": [
           {
             "group": "Overview",
-            "pages": ["introduction"]
+            "pages": ["index"]
           }
         ]
       },
