@@ -9,20 +9,20 @@
   },
   "favicon": "/favicon.png",
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/sclogo.jpg",
+    "dark": "/logo/sclogo.jpg"
   },
   "navbar": {
     "links": [
       {
         "label": "Support",
-        "href": "mailto:support@supercase.com"
+        "href": "mailto:support@supercase.ai"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Login",
-      "href": "https://app.supercase.com"
+      "href": "https://app.supercase.ai"
     }
   },
   "navigation": {
