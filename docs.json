@@ -40,6 +40,17 @@
         "tab": "For Sales Reps",
         "groups": [
           {
+            "group": "Using Supercase",
+            "pages": [
+              "sales/when-to-use",
+              "sales/your-first-supercase",
+              "sales/qualify",
+              "sales/research",
+              "sales/supercase-tabs",
+              "sales/share"
+            ]
+          },
+          {
             "group": "How It Works",
             "pages": [
               "sales/cost-of-inaction",
