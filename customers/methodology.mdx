@@ -16,8 +16,8 @@ icon: "flask"
   <Step title="Three honest options">
     We always show Do Nothing, DIY, and Vendor. We acknowledge that solving it internally is a valid path - the difference is how much of the organization actually adopts the improvement.
   </Step>
-  <Step title="Ranges over point estimates">
-    We run 1,000 simulated scenarios varying key inputs to produce conservative, expected, and optimistic outcomes. This matches how finance teams forecast and plan.
+  <Step title="Three scenarios, defensible math">
+    Every business case is presented as Conservative, Likely, and Stretch - three deterministic recalculations of the same model under different assumption sets. No statistical sampling, no hidden distributions. Each scenario can be defended line by line.
   </Step>
 </Steps>
 
@@ -49,12 +49,20 @@ Impact doesn't arrive on day one. The model accounts for:
 
 This produces a realistic trajectory where Year 1 shows the ramp and Year 2+ shows the steady-state value.
 
-### Monte Carlo Simulation
+### Three Scenarios
 
-Rather than a single calculation, the model runs **1,000 scenarios** with slight variations in:
+Rather than a single number, the model presents three deterministic scenarios:
 
-- Current metric values (measurement uncertainty)
-- Target metric values (improvement uncertainty)
-- Adoption rates (rollout uncertainty)
+- **Conservative** - lower lift, slower ramp, or longer time-to-impact
+- **Likely** - the seller's defensible base case (the single value they typed)
+- **Stretch** - higher lift, faster ramp, or earlier impact
 
-The result is a **probability distribution** showing the range of likely outcomes - giving your finance team the conservative, expected, and optimistic cases they need for planning.
+Conservative and Stretch are derived from Likely using rules set by your organization's RevOps or Finance team. Each rule is transparent: "Conservative = 70% of the Likely lift, set by RevOps for this KPI class." Your finance team can see the exact transformation that produced each scenario number.
+
+This replaces the statistical sampling approach that earlier tools relied on. For the deal sizes Supercase typically models, sampling-based confidence intervals collapse to near-zero anyway - they were giving false precision. Named scenarios with auditable rules match how finance teams actually plan.
+
+---
+
+### Multi-KPI Compounding
+
+When a supercase covers multiple KPIs that compound together - for example, growing pipeline volume *and* improving win rate - the combined impact is **larger than the sum of the individual gains**. The model surfaces this compounding amount explicitly so the customer can see both the per-KPI math and the joint result, without double-counting.

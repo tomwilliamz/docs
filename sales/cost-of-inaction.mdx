@@ -133,19 +133,18 @@ During the ramp period, adoption gradually increases from a0 toward a1, and a **
 
 ---
 
-## Confidence Ranges
+## Three Scenarios: Conservative, Likely, Stretch
 
-Rather than showing a single number, Supercase shows a **range of likely outcomes** using 1,000 simulated scenarios.
+Rather than showing a single number, Supercase frames every business case as **three named scenarios** with transparent assumptions.
 
-Each simulation slightly varies:
-- The current metric (S0) - because measurement has uncertainty
-- The achievable target (S1) - because the lift isn't guaranteed
-- The adoption rate (a1) - because rollout success varies
+The seller types one number per KPI - the **Likely** case. Conservative and Stretch are derived from it using rules set by your organization's RevOps or Finance team. The rules are visible, editable, and the same for every supercase in your org.
 
-| Band | Meaning | Use In Conversation |
-|------|---------|-------------------|
-| **P10-P25** | Conservative / downside | "Even in the worst case, you're looking at $X" |
-| **P50** | Expected / median | "The most likely outcome is $Y" |
-| **P75-P90** | Optimistic / upside | "If everything goes well, this could reach $Z" |
+| Scenario | What It Represents | Use In Conversation |
+|---|---|---|
+| **Conservative** | Lower lift, slower ramp, or longer time-to-impact | "Even on the conservative case, you're looking at $X" |
+| **Likely** | The seller's defensible base case | "Our base case is $Y" |
+| **Stretch** | Higher lift, faster ramp, or earlier impact | "If everything lines up, this reaches $Z" |
 
-Single-point estimates feel like sales tricks. Ranges feel like analysis. CFOs and finance teams respect confidence intervals because that's how they think about forecasting.
+<Note>This is **not** statistical sampling. There is no hidden distribution, no Monte Carlo, no probability claim. Each scenario is a deterministic recalculation of the same model under a different assumption set. That makes every number defensible to a finance team: "Show me how you got Conservative" returns the exact rule (e.g., "70% of the Likely lift, set by RevOps for this KPI class").</Note>
+
+The three scenarios produce the visual band on the chart - the same grammar as Bear / Base / Bull in equity research, with named edges instead of percentile labels.

@@ -1,33 +1,42 @@
 ---
 title: "Supported KPIs"
-description: "The 10 pre-built KPI types available in Supercase and how they work."
+description: "The pre-built KPI types available in Supercase and how they work."
 icon: "chart-bar"
 ---
 
-## Go-to-Market KPIs
+Supercase ships with **15 pre-built KPI types** across four categories. Each is fully wired into the engine, has its own panel inputs, scenario rules, and unit handling. Org admins can also configure additional custom KPIs.
+
+## Go-to-Market
 
 | KPI | What It Measures | Typical S0 | Impact Driver |
-|-----|-----------------|-----------|---------------|
-| **Win Rate** | Deal close percentage | 15-30% | Pipeline conversion |
-| **Churn Rate** | Annual logo/revenue churn | 5-20% | ARR preservation |
-| **Net Dollar Retention** | Expansion vs. contraction | 95-115% | ARR growth |
-| **SQLs Generated** | Sales qualified leads per period | Varies | Pipeline volume |
+|---|---|---|---|
+| **Win Rate** | Deal close percentage | 15–30% | Pipeline conversion |
+| **Churn Rate** | Annual logo or revenue churn | 5–20% | ARR preservation |
+| **Net Dollar Retention** | Expansion vs. contraction | 95–115% | ARR growth |
+| **SQLs Generated** | Sales-qualified leads per period | Varies | Pipeline volume |
 | **Pipeline Value** | Total pipeline dollars | Varies | Revenue opportunity |
-| **Budget Efficiency** | Marketing/sales ROI | Varies | Cost savings |
-| **Deal Velocity** | Days to close | 30-120 days | Cash flow acceleration |
+| **GTM Efficiency** | Marketing / sales ROI | Varies | Cost savings |
+| **Deal Velocity** | Days to close | 30–120 days | Cash flow acceleration |
 
-## Productivity KPIs
+## Productivity
 
 | KPI | What It Measures | Typical S0 | Impact Driver |
-|-----|-----------------|-----------|---------------|
-| **Ticket Resolution** | Support tickets resolved | Varies | Operational efficiency |
+|---|---|---|---|
+| **Tickets Resolved** | Support volume handled | Varies | Operational throughput |
 | **Employee Productivity** | Output per employee | Varies | Labor leverage |
+| **Onboarding Time** | Time to make a new hire productive | 60–180 days | Faster ramp, lower cost-per-hire |
+| **Time to Value** | Time before a customer realizes value | 30–120 days | Faster adoption, lower churn risk |
+| **Truck Turn Time** | Logistics dwell / detention time | Varies | Asset utilization |
 
-## Operations KPIs
+## Structural and Risk
 
-| KPI | What It Measures | Typical S0 | Impact Driver |
-|-----|-----------------|-----------|---------------|
-| **LTV:CAC Ratio** | Lifetime value vs. acquisition cost | 2-5x | Unit economics |
+These KPIs use a **step-change** model: impact arrives at go-live, not on an adoption curve. The savings are structural rather than behavior-driven.
+
+| KPI | What It Measures | Typical Use |
+|---|---|---|
+| **Structural Takeout** | Replacing a legacy vendor or platform | "Retire SAP Ariba" — savings equal the replaced contract |
+| **Risk Reduction** | Probability × cost of a controllable event | Compliance, security, fraud, downtime |
+| **Consumption Waste** | Unused capacity or inefficient consumption | Cloud spend, licenses, materials |
 
 ---
 
@@ -35,21 +44,21 @@ icon: "chart-bar"
 
 ### Compounding KPIs: Churn and NDR
 
-<Warning>These KPIs behave differently from all others.</Warning>
+<Warning>These KPIs behave differently from rate KPIs.</Warning>
 
-Unlike one-time rate improvements, reducing churn creates a **snowball effect**. Each year the retained base is larger, so the same churn rate saves more in absolute dollars.
+Reducing churn creates a **snowball effect**. Each year the retained base is larger, so the same churn rate saves more in absolute dollars.
 
 The model runs a **two-futures simulation** comparing ARR trajectories with and without improvement:
 
-- `ARR (no fix) = Base ARR x (1 - churn_rate)^year`
-- `ARR (with fix) = Base ARR x (1 - improved_churn)^year`
-- **COI = cumulative difference over the time horizon**
+- `ARR (no fix) = Base ARR × (1 − churn_rate)^year`
+- `ARR (with fix) = Base ARR × (1 − improved_churn)^year`
+- **COI = cumulative difference over the horizon**
 
 This makes churn and NDR particularly powerful KPIs for retention-focused products.
 
 ### Cost Reduction: Two Modes
 
-Cost reduction KPIs can work in two modes:
+Throughput KPIs (like Tickets Resolved) can frame impact two ways:
 
 <CardGroup cols={2}>
   <Card title="Reduce Cost" icon="arrow-down">
@@ -61,3 +70,13 @@ Cost reduction KPIs can work in two modes:
 </CardGroup>
 
 The seller selects which mode fits the customer's situation. Both use the same underlying math but frame the output differently.
+
+### Multi-KPI Compounding
+
+When a supercase covers multiple KPIs that move together (for example Pipeline Value × Win Rate), the combined dollar impact is larger than the sum of the individual gains. Supercase surfaces this **compounding amount** as a separate line so the math reconciles cleanly:
+
+```
+Joint impact = Pipeline alone  +  Win Rate alone  +  Compounding
+```
+
+The compounding line is detected automatically based on how the KPIs share inputs - no manual configuration required.

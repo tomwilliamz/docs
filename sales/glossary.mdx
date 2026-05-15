@@ -13,8 +13,9 @@ icon: "book"
 | **a1_vendor** | Vendor adoption ceiling - % that would adopt with a vendor solution |
 | **M0** | Financial pool - the dollar amount at stake for a given metric |
 | **COI** | Cost of Inaction - the financial loss from not closing the S0-to-S1 gap |
-| **P10 / P50 / P90** | Percentile bands from Monte Carlo simulation (conservative / expected / optimistic) |
-| **Monte Carlo** | A simulation method that runs 1,000 scenarios with slight input variations to produce a range of outcomes |
+| **Conservative / Likely / Stretch** | The three deterministic scenarios Supercase shows for every business case. Conservative and Stretch are derived from Likely via per-KPI rules set by your org's RevOps team. |
+| **Scenario rule** | The transformation that produces Conservative or Stretch from Likely - e.g., "70% of the Likely lift" or "ramp is one quarter slower." Visible and editable per org. |
+| **Compounding impact** | The extra dollars from multiple KPIs lifting together that the per-KPI sum misses. Shown as its own line so the math reconciles. |
 | **Rollout profile** | The speed at which adoption ramps (fast / steady / slow) |
 | **Proficiency curve** | Models the fact that even adopted users aren't fully productive immediately |
 | **Time horizon (T)** | The number of quarters over which the model projects impact (typically 8-12) |
